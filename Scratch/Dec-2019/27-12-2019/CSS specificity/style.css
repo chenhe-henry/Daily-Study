@@ -1,0 +1,18 @@
+* {
+  color: aqua;
+}
+
+.colorLetter {
+  color: blue;
+}
+.yellowLetter {
+  color: yellow;
+}
+.main {
+  display: block;
+}
+.target,
+.sub {
+  display: block;
+  color: red;
+}

@@ -1,0 +1,39 @@
+.item:empty {
+  height: 20vh;
+  background-color: aqua;
+  display: none;
+}
+.item:not(:empty) {
+  border: 1px solid #ccc;
+  /* ... */
+}
+p:first-of-type {
+  font-weight: bold;
+  color: red;
+}
+
+p:last-of-type {
+  font-size: 20px;
+}
+
+img:last-of-type {
+  border: 2px solid red;
+}
+
+p:nth-of-type(odd) {
+  color: red;
+}
+p:nth-of-type(even) {
+  color: aqua;
+}
+img:nth-of-type(2) {
+  height: 12vh;
+  width: 12vw;
+}
+p:nth-of-type(3n) {
+  color: blue;
+  font-weight: bold;
+}
+p:nth-of-type(4n) {
+  color: unset;
+}
