@@ -1,9 +1,46 @@
 /*  */
+* {
+  text-align: right;
+}
 
-h2 {
+body {
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 255, 0.5),
+    rgba(255, 0, 0, 0.5)
+  );
+  background-size: cover;
+}
+
+h2,
+p {
   color: red;
+  text-align: center;
+  border: 5px dashed purple;
+  cursor: pointer;
 }
 
 p {
   color: pink;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+}
+
+.webtext {
+  border: 5px dashed green;
+}
+
+.active {
+  color: red;
+}
+
+#div1 {
+  background: rgba(0, 0, 255, 0.2);
+}
+
+#div2 {
+  background: rgba(255, 0, 0, 0.2);
 }
