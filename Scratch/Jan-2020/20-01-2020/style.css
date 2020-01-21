@@ -1,0 +1,27 @@
+.header {
+  text-align: center;
+  background-image: linear-gradient(
+    to right top,
+    rgba(212, 16, 167, 0.8),
+    rgba(211, 221, 21, 0.8)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 2rem;
+}
+.section--add-new-task {
+  text-align: center;
+  font-size: 2rem;
+}
+.section--table {
+  margin: 0 auto;
+  width: 60vw;
+  font-size: 1.5rem;
+}
+
+#greyone {
+  background-color: grey;
+}
+#greenone {
+  background-color: green;
+}
