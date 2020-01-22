@@ -1,0 +1,19 @@
+.section__gallery {
+  //   background-color: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+
+  &--banner {
+    font-size: 5rem;
+    text-align: center;
+    margin: 0 auto;
+    height: 15vh;
+    width: 95vw;
+    background-image: linear-gradient(to right top, purple, grey);
+    -webkit-background-clip: text;
+    color: transparent;
+
+    &:hover {
+      background-image: linear-gradient(to right, yellow, red);
+    }
+  }
+}

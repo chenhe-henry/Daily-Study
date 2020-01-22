@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Bodies</h1>
+<h1>All Updated Users</h1>
+<table class="table table-hover">
+<tr>
+<th scope="col">Id</th>
+<th scope="col">Weight</th>
+<th scope="col">Height</th>
+
+<th scope="col">Created at</th>
+<th colspan="2"></th>
+</tr>
+<% @bodies.each do |body| %>
+<tr>
+<td><%= body.id %></td>
+<td><%= body.weight %></td>
+<td><%= body.height %></td>
+<td><%= localize(body.created_at + 39600, :format => :long) %></td>
+<td><%= link_to 'Edit', edit_body_path(body) %></td>
+<td><%= link_to 'Destroy', body, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>
+<% end %>
+</table>
+
+<br>
+
+<%= link_to 'New Body', new_body_path %>

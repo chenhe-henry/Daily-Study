@@ -1,0 +1,58 @@
+<section class="section__bmi">
+<div class="d-flex flex-row section__bmi--banner"><b><%= @title %></b></div>
+<div class="about">
+  <h2><%= @bmi_explaination_title%></h2>
+  <p><%= @bmi_explaination%></p>
+</div>
+<div class="left">
+<%= image_tag('logos/bmi.jpeg', :class => 'd-block mx-auto', height:'200px') %>
+</div>
+<div class="right">
+<form id="dataEnterForm" style="text-align: center"> 
+  <div>
+    <label>Weight<input id="frmInputWeight" type="weight" name="weight" /> kg</label>
+  </div>
+  <div>
+    <label>Height<input id="frmInputHeight" type="height" name="height"/> m</label>
+    <div>
+      <input class="btn btn-primary" type="submit" value="Calculate Your BMI"/>
+      <br />
+      <br>
+  <h5>BMI RESULT: <span id="bmiresult"></span></h5>
+  <p id="BmiSummary"></p>
+  
+    </div>
+  </div>
+</form>
+</div>
+</section>
+
+
+<script>
+  $(document).ready(function () {
+    //add new task 
+    $("#dataEnterForm").submit(function (event) {
+      event.preventDefault();
+      // get all values that entered
+      var inputWeight = $("#frmInputWeight").val();
+      var inputHeight = $("#frmInputHeight").val();
+      var weight = parseFloat(inputWeight);
+      var height = parseFloat(inputHeight);
+      var result = weight/(height^2);
+      $('#bmiresult').html(result);
+      if (result < 18.5) {
+        $('#BmiSummary').append('You are considered underweight and possibly malnourished.').css("color", "blue").css("font-size", "30px");
+      } else if (result >= 18.5 && result < 24.9) {
+        $('#BmiSummary').append('You are within a healthy weight range for young and middle-aged adults.').css("color", "green").css("font-size", "30px");
+      } else if (result >= 25 && result < 29.9) {
+        $('#BmiSummary').append('You are considered overweight.').css("color", "orange").css("font-size", "30px");
+      } else if (result >= 30) {
+        $('#BmiSummary').append('You are considered obese.').css("color", "red").css("font-size", "30px");
+      }
+      $("#frmInputWeight").val("");
+      $("#frmInputHeight").val("");
+      return false;
+    
+    });
+});
+</script>

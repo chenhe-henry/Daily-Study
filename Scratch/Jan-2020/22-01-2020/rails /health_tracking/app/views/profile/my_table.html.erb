@@ -1,0 +1,37 @@
+<div class="d-flex flex-row"><b>Hi, <%= @logged_in_user.name %>, <%= @title %></div>
+
+<h1>Your Records</h1>
+<table class="table table-hover">
+<thead>
+    <tr>
+    <th scope="col">Id</th>
+    <th scope="col">Weight</th>
+    <th scope="col">Height</th>
+
+    <th scope="col">Created at</th>
+    <th scope="col">Record time</th>
+    <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @bodies.each do |body| %>
+    <tr>
+    <td><%= body.id %>hahas</td>
+    <td><%= body.weight %></td>
+    <td><%= body.height %></td>
+
+    <td><%= localize(body.created_at + 39600, :format => :long) %></td>
+    <td><%= localize(body.date, :format => "%d %b %Y") %></td>
+    <td><%= link_to 'Delete', body_path(body), method: 'delete' %></td>
+
+    </tr>
+    </tbody>
+    <% end %>
+</table>
+
+
+
+
+
+
+

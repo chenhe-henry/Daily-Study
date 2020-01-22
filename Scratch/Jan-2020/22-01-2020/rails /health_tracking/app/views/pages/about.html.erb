@@ -1,0 +1,53 @@
+
+
+
+<!-- Logo -->
+<section class="section__about">
+<!-- Banner -->
+<div class="d-flex flex-row section__about--banner"><strong><%= @title %></strong></div>
+<!-- Cards -->
+<div class="d-flex flex-row justify-content-around my-3 px-5 text-center flex-wrap section__about--content-1">
+
+    <div class="d-flex section__about--content-1-callOuts flex-column p-4 m-2 flex-fill">
+    <%= image_tag('logos/bmi.jpeg', :class => 'd-block mx-auto', height:'200px') %>
+    <h3>BMI calculator</h3>
+    <p>Calculate your BMI, get know your health condition.</p>
+    <a href="/bmi_calculator" class="btn btn-outline-info">Learn More</a>
+    </div> 
+
+    <div class="d-flex section__about--content-1-callOuts flex-column p-4 m-2 flex-fill">
+    <%= image_tag('logos/body_measurement.jpeg', :class => 'd-block mx-auto', height:'200px') %>
+    <h3>Body Measurement</h3>
+    <p>Record and track your weight every single day.</p>
+    <a href="/body_measurement_public" class="btn btn-outline-info">Learn More</a>
+    </div> 
+
+    <div class="d-flex section__about--content-1-callOuts flex-column p-4 m-2 flex-fill">
+    <%= image_tag('logos/warriors_gallery.jpeg', :class => 'd-block mx-auto', height:'200px') %>
+    <h3>Warriors Gallary</h3>
+    <p>Share us your colorful life!</p>
+    <a href="/warriors_gallery" class="btn btn-outline-info">Learn More</a>
+    </div> 
+</div>
+<!-- Text and Image -->
+<div class="d-flex flex-column flex-sm-row align-items-center px-2 px-sm-5 mb-3 section__about--content-2">
+    <div class="w-25 mr-3">
+       <%= image_tag('logos/healthlife.jpeg', :class => 'img-fluid') %> 
+    </div>
+    <div class="w-75 p-3">
+        <h4>Tracks your progress</h4>
+        <p><%= @section %></p>
+        <p><%= @section1 %></p>
+        <p><%= @section3 %></p>
+        <h4>Encourages competition</h4>
+        <p><%= @section2 %></p>
+        <p><%= @section4 %></p>
+        <p><%= @section5 %></p>
+    </div>
+</div>
+</section>
+
+
+
+
+

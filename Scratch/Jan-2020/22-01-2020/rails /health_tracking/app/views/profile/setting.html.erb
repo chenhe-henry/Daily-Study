@@ -1,0 +1,13 @@
+<div class="d-flex flex-row banner8"><b>Hi, <%= @logged_in_user.name %>! You are the #<%= @logged_in_user.id %> member using our app.</div>
+<h1>Your details</h1>
+
+
+<p><b>Email:</b> <%= @logged_in_user.email %></p>
+<p><b>City:</b> <%= @logged_in_user.city %></p>
+<p><b>Gender:</b> <%= @logged_in_user.gender%></p>
+<p><b>Created at:</b> <%= localize(@logged_in_user.created_at + 39600, :format => :long) %></p>
+<a href="/edit" class="btn btn-primary">Edit</a>
+
+<%# <hr>
+<%= line_chart @line_graph_data%>
+

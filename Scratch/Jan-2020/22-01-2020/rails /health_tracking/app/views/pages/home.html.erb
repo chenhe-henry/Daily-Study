@@ -1,0 +1,22 @@
+<section class="section__home">
+<div class="d-flex flex-row section__home--banner"><b><%= @content %></b></div>
+<h3>Top 5 Most Active Body Builders</h3>
+<table class="table table-hover">
+<tr>
+<th scope="col">Name</th>
+
+<th scope="col">Gender</th>
+<th scope="col">Location</th>
+<th scope="col">Active Days</th>
+
+</tr>
+<% @top.each do |top| %>
+<tr>
+<td><%= top.name %></td>
+<td><%= top.gender %></td>
+<td><%= top.city %></td>
+<td><%= top.id %></td>
+</tr>
+<% end %>
+</table>
+</section>

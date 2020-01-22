@@ -1,0 +1,32 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.bottomArea {
+  background-color: #424243;
+  color: #fff;
+  height: 150px;
+  font-size: 0.8rem;
+}
+
+.bottomArea p {
+  font-size: 0.7rem;
+}
+
+.bottomArea h5 {
+  font-weight: 800;
+  font-size: 16px;
+}
+
+::selection {
+  background-color: #013896;
+  color: #f1f1f1;
+}
+
+i {
+  font-size: 30px;
+}
+
+.footer {
+  position: bottom;
+}

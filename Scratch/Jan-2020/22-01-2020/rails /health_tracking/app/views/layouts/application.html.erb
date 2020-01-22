@@ -4,12 +4,94 @@
     <title>HealthTracking</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+   
   </head>
 
   <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">  
+  <a class="navbar-brand" href="/about">HealthTracking</a>
+    <ul class="navbar-nav">
+      <li class="nav-item, navigation active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+  
+      <li class="nav-item, navigation">
+        <a class="nav-link" href="/body_measurement_public">Body Measurement</a>
+      </li>
+      <li class="nav-item, navigation">
+        <a class="nav-link" href="/bmi_calculator">BMI Calculator</a>
+      </li>
+      <li class="nav-item, navigation">
+        <a class="nav-link" href="/warriors_gallery">Warriors' Gallery</a>
+      </li>
+      <li class="nav-item, login">
+      <a class="nav-link">
+      
+      <% if current_user %>
+      Logged in as <%= current_user.email %>.
+      <b><%= link_to "My Dashboard", mypage_path %></b>
+            <br />
+            <b><%= link_to "My Table", mytable_path %></b>
+            <br />
+            <b><%= link_to "Profile", mysetting_path %></b>
+            <br />
+            <b><%= link_to "Log Out", logout_path %></b>
+      <%= link_to "Log Out", logout_path %>
+      <% else %>
+        <%= link_to "Sign Up", signup_path %> or
+        <%= link_to "Log In", login_path %>
+      <% end %>
+        </a>
+      </li>
+    </ul>
+  <%# </div> %>
+</nav>
+
+<!--<div class="logo">
+<%= image_tag('logos/logo.jpeg', width: '300px') %>
+</div>-->
+<div class="maincontent">
     <%= yield %>
+</div>
+  <!-- bottom -->
+  <footer class="footer ">
+  <div class="d-flex bottomArea p-3 mt-5">
+  <div class="w-60">
+  <%= image_tag('logos/logo.jpeg', :class => 'img-fluid h-25') %> 
+  
+  <h5>About Us</h5>
+         <section class="media">
+    <span style="font-size: 36px; color: black;">
+      <span class="facebook" title="facebook"><i class="fab fa-facebook-f"></i></span>
+    <span class="twitter" title="twitter"><i class="fab fa-twitter"></i></span>
+    <span class="youtube" title="youtube"><i class="fab fa-youtube"></i></span>
+    <span class="pinterest" title="pinterest"><i class="fab fa-pinterest"></i></span>
+    </span>
+    </section>
+  <section class="copyright">
+      <h5>&copy;2019 General Assembly Lab</h5>
+    </section>
+  </div>
+  <div class="d-flex flex-column mt-3 ml-5 ">
+      <h5>Contact Us</h5>
+ 
+      <div>123 Sydney Road</div>
+      <div>555-55555</div>
+      <div><%= mail_to "chenhe.elec@gmail.com", cc: "hannaliu59@hotmail.com", subject: "This is a test email." do %>
+          <strong>Email me:</strong> <span>chenhe.elec@gmail.com</span>
+          <% end %>
+      </div>
+  </div>
+</div>
+</footer>
   </body>
+  
 </html>
