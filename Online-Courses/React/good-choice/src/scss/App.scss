@@ -6,15 +6,18 @@
   --font-size-heading-1: 3rem;
 }
 
+// div {
+//   background-image: linear-gradient(
+//     to bottom right,
+//     var(--color-blue),
+//     var(--color-red-transparent)
+//   );
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   min-height: 100vh;
+//   text-align: center;
+// }
 div {
-  background-image: linear-gradient(
-    to bottom right,
-    var(--color-blue),
-    var(--color-red-transparent)
-  );
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100vh;
   text-align: center;
 }
 h1 {
