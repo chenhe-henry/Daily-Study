@@ -1,0 +1,10 @@
+:root {
+  --color-red: red;
+
+  --font-size-heading-1: 3rem;
+}
+
+h1 {
+  font-size: var(--font-size-heading-1);
+  color: var(--color-red);
+}
