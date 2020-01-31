@@ -1,10 +1,23 @@
 :root {
   --color-red: red;
+  --color-red-transparent: rgba(255, 0, 0, 0.5);
+  --color-blue: rgba(0, 0, 255, 0.5);
 
   --font-size-heading-1: 3rem;
 }
 
+div {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--color-blue),
+    var(--color-red-transparent)
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
 h1 {
   font-size: var(--font-size-heading-1);
   color: var(--color-red);
+  display: inline-block;
 }
