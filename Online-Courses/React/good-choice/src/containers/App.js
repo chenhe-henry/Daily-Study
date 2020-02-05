@@ -1,6 +1,6 @@
 import React from "react";
-import "./scss/App.scss";
-import Person from "./Person/Person";
+import "./App.scss";
+import Person from "../components/Persons/Person/Person";
 
 class App extends React.Component {
   //  array destructuring, use [initial state, function(to change the state)]
