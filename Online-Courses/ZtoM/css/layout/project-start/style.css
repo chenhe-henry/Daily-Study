@@ -24,6 +24,11 @@ body {
 }
 
 /* Nav */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 .main-nav {
   display: flex;
   list-style: none;
@@ -55,6 +60,9 @@ a {
   align-items: center;
   justify-content: center;
   height: 50vh;
+}
+.container > img {
+  width: 30rem;
 }
 
 .grid-wrapper {
