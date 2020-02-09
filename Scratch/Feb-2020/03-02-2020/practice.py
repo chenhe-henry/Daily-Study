@@ -1,5 +1,12 @@
+result = [2, 5]
+
 a = 33
-b = 200
-if b > a:
-    a += a
-    print(a, b)
+b = result.append(a)
+print(b)
+c = result.append(b)
+d = result.append(c)
+
+print(result)
+print(type(result))
+print(type(a))
+print(type(b))

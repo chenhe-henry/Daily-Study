@@ -1,0 +1,19 @@
+
+
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+myHeaders.append("X-Api-Key", "key_358bea2380f4e7f0acb999de88b0b4e9");
+
+var raw = JSON.stringify({"listingType":"Rent","propertyTypes":["House","NewApartments"],"minBedrooms":3,"minBathrooms":2,"minCarspaces":1,"locations":[{"state":"NSW","region":"","area":"","suburb":"Newtown","postCode":"","includeSurroundingSuburbs":false}]});
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("https://api.domain.com.au/v1/listings/residential/_search", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));

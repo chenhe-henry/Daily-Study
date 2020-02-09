@@ -15,7 +15,9 @@ class App extends Component {
         city: Faker.address.city(),
         zipCode: Faker.address.zipCode(),
         address: Faker.address.streetAddress(),
-        picture: Faker.image.avatar()
+        picture: Faker.image.city(),
+        picture1: Faker.image.animals(),
+        picture2: Faker.image.food()
       };
       this.setState(prevState => ({
         users: [...prevState.users, user]
@@ -26,7 +28,9 @@ class App extends Component {
   renderUsers(user) {
     return (
       <div style={{ border: "solid 1px #eee" }}>
-        <img src={user.picture} alt={user.city} />
+        <img src={user.picture} alt={user.city} width="100px" height="100px" />
+        <img src={user.picture1} alt={user.city} width="100px" height="100px" />
+        <img src={user.picture2} alt={user.city} width="100px" height="100px" />
         <h4>city: {user.city}</h4>
         <h4>address: {user.address}</h4>
         <h4>zipCode: {user.zipCode}</h4>
