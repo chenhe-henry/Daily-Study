@@ -1,0 +1,21 @@
+.section__gallery {
+  padding: 1rem;
+}
+
+.section__gallery--banner {
+  font-size: 5rem;
+  text-align: center;
+  margin: 0 auto;
+  height: 15vh;
+  width: 95vw;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(purple), to(grey));
+  background-image: linear-gradient(to right top, purple, grey);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.section__gallery--banner:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(yellow), to(red));
+  background-image: linear-gradient(to right, yellow, red);
+}
+/*# sourceMappingURL=gallery.css.map */

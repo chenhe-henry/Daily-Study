@@ -1,0 +1,17 @@
+:root {
+  --color-red: red;
+  --color-red-transparent: rgba(255, 0, 0, 0.5);
+  --color-blue: rgba(0, 0, 255, 0.5);
+  --font-size-heading-1: 3rem;
+}
+
+div {
+  text-align: center;
+}
+
+h1 {
+  font-size: var(--font-size-heading-1);
+  color: var(--color-red);
+  display: inline-block;
+}
+/*# sourceMappingURL=App.css.map */
