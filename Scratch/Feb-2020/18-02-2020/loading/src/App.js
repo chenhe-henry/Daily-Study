@@ -2,27 +2,30 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
+import axios from "axios";
+
 class App extends React.Component {
-  state = {};
-  loadingHandler = () => {
-    alert("Hellow");
-  };
+  state = { contents: [] };
+
+  componentDidMount() {
+    var requestOptions = {
+      method: "GET",
+      redirect: "follow"
+    };
+
+    fetch("https://www.who.int/rss-feeds/news-english.xml", requestOptions)
+      .then(response => response.text())
+      .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+      .then(result => {
+        console.log(result);
+        this.setState({ contents: result });
+      });
+  }
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="#"
-            rel="noopener noreferrer"
-            onClick={this.loadingHandler}
-          >
-            Learn React
-          </a>
+          <p>{this.state.contents}</p>
         </header>
       </div>
     );
