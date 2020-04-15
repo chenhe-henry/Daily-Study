@@ -1,0 +1,17 @@
+.title {
+  display: inline-block;
+}
+.title a {
+  text-decoration: none;
+  color: black;
+}
+.title::after {
+  content: "/";
+  margin: 20px;
+}
+
+.title:hover,
+a:hover {
+  color: aqua;
+  text-decoration: underline;
+}
