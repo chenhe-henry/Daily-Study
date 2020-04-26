@@ -9,3 +9,10 @@ div.container p {
 div.container > p {
   color: blue;
 }
+
+div + p {
+  color: chartreuse;
+}
+div ~ p {
+  color: red;
+}
