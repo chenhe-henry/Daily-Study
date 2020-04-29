@@ -7,3 +7,6 @@
 #progress-bar[value]::-webkit-progress-value {
   background-color: blue;
 }
+summary::-webkit-details-marker {
+  display: none;
+}
