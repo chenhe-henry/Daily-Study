@@ -10,3 +10,7 @@
 summary::-webkit-details-marker {
   display: none;
 }
+
+hr {
+  border-color: red;
+}
