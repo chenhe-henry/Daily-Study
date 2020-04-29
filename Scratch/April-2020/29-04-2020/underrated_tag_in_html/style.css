@@ -14,3 +14,7 @@ summary::-webkit-details-marker {
 hr {
   border-color: red;
 }
+
+details {
+  cursor: pointer;
+}
