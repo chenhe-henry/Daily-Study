@@ -7,6 +7,29 @@
     <title>Document</title>
   </head>
   <body>
+    <details>
+      <ul>
+        <li>
+          <details
+            ><ol>
+              <li>Fish</li>
+              <li>Beef</li>
+            </ol>
+            <summary>Meat</summary></details
+          >
+        </li>
+        <li>
+          <details>
+            <ol>
+              <li>Coke</li>
+              <li>Water</li>
+            </ol>
+            <summary>Drink</summary>
+          </details>
+        </li>
+      </ul>
+      This is the detail part<summary>Click to show the hidden part</summary>
+    </details>
     <picture
       ><source
         media="(max-width:500px)"
@@ -23,6 +46,7 @@
     <fieldset>
       <legend>Login</legend>
       User Name: <input /> Email: <input /><br />
+      Day: <input type="color" /> Month: <input type="month" />
       <button>Submit</button>
     </fieldset>
   </body>
