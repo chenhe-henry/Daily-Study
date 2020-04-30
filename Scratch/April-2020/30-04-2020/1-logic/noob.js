@@ -6,7 +6,9 @@ function toAccounting(n) {
     return n.toString();
   }
 }
-console.timeEnd("This accounting funtion");
+
 console.log(toAccounting(0));
 console.log(toAccounting(10));
 console.log(toAccounting(-5));
+console.log(toAccounting(undefined));
+console.timeEnd("This accounting funtion");
