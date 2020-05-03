@@ -7,8 +7,8 @@ console.log("------------");
 3 > 2 && console.log("nice");
 console.log("------------");
 
-function doSomething(el = 23) {
-  return el;
+function doSomething(el) {
+  return (el = el || 23);
 }
 
-console.log(doSomething());
+console.log(doSomething(NaN));
