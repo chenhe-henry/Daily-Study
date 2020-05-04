@@ -6,3 +6,7 @@ ins {
   color: rgb(131, 131, 64);
   background-color: yellow;
 }
+mark {
+  color: red;
+  background-color: aqua;
+}
