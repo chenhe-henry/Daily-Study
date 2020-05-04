@@ -19,7 +19,7 @@ document.getElementById("low").addEventListener("click", () => {
   showdetail();
 });
 document.getElementById("medium").addEventListener("click", () => {
-  document.getElementById("temp").setAttribute("value", "35");
+  document.getElementById("temp").setAttribute("value", "33");
   showdetail();
 });
 document.getElementById("high").addEventListener("click", () => {

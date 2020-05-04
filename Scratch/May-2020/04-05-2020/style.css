@@ -32,3 +32,18 @@ progress[value]::-webkit-progress-bar {
   width: 100px;
   background-color: aqua;
 }
+meter::-webkit-meter-optimum-value {
+  box-shadow: 0 5px 5px -5px #999 inset;
+  background-image: linear-gradient(90deg, yellow 5%, yellow 100%);
+  background-size: 100% 100%;
+}
+meter::-webkit-meter-suboptimum-value {
+  box-shadow: 0 5px 5px -5px #999 inset;
+  background-image: linear-gradient(90deg, #8bcf69 15%, #8bcf69 100%);
+  background-size: 100% 100%;
+}
+meter::-webkit-meter-even-less-good-value {
+  box-shadow: 0 5px 5px -5px #999 inset;
+  background-image: linear-gradient(90deg, aqua 15%, aqua 100%);
+  background-size: 100% 100%;
+}
