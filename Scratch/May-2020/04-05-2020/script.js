@@ -11,9 +11,8 @@ hide.addEventListener("click", () => {
   z.parentNode.replaceChild(test, z);
 });
 const showdetail = () => {
-  document.getElementById("showtemp").innerHTML = document.getElementById(
-    "temp"
-  ).attributes[4].value;
+  document.getElementById("showtemp").innerHTML =
+    document.getElementById("temp").attributes[4].value + " out of 44";
 };
 document.getElementById("low").addEventListener("click", () => {
   document.getElementById("temp").setAttribute("value", "18");
