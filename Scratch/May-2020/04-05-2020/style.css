@@ -21,3 +21,14 @@ progress[value]::-webkit-progress-bar {
   border-radius: 2px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
 }
+#big {
+  height: 500px;
+  width: 500px;
+  background-color: red;
+  overflow: auto;
+}
+.small {
+  height: 1500px;
+  width: 100px;
+  background-color: aqua;
+}
