@@ -2,8 +2,19 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Headroom from "react-headroom";
+import cogoToast from "cogo-toast";
 
 function App() {
+  const clickhandler = () => {
+    cogoToast.success("This is success", {
+      position: "top-right",
+      heading: "Congrats",
+    });
+
+    cogoToast.loading("Loading your data...").then(() => {
+      cogoToast.success("Data Successfully Loaded");
+    });
+  };
   return (
     <div className="App">
       <Headroom
@@ -21,65 +32,9 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
+          href="#"
           rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+          onClick={clickhandler}
         >
           Learn React
         </a>
