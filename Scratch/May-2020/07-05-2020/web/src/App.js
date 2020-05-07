@@ -6,13 +6,14 @@ import cogoToast from "cogo-toast";
 
 function App() {
   const clickhandler = () => {
+    cogoToast.loading("Loading your data...").then(() => {
+      cogoToast.success("Data Successfully Loaded");
+    });
+  };
+  const onclickhandler = () => {
     cogoToast.success("This is success", {
       position: "top-right",
       heading: "Congrats",
-    });
-
-    cogoToast.loading("Loading your data...").then(() => {
-      cogoToast.success("Data Successfully Loaded");
     });
   };
   return (
@@ -36,7 +37,15 @@ function App() {
           rel="noopener noreferrer"
           onClick={clickhandler}
         >
-          Learn React
+          Loading
+        </a>{" "}
+        <a
+          className="App-link"
+          href="#"
+          rel="noopener noreferrer"
+          onClick={onclickhandler}
+        >
+          Success
         </a>
       </header>
     </div>
