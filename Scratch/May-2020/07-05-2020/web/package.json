@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.9.13",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "cogo-toast": "^4.2.3",
+    "core-js": "^3.6.5",
+    "material-table": "^1.57.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-headroom": "^3.0.0",

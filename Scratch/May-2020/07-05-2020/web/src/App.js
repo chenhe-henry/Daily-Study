@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Headroom from "react-headroom";
 import cogoToast from "cogo-toast";
+import MaterialTable from "material-table";
 
 function App() {
   const clickhandler = () => {
@@ -48,6 +49,65 @@ function App() {
           Success
         </a>
       </header>
+      <div style={{ maxWidth: "100%" }}>
+        <MaterialTable
+          columns={[
+            { title: "Name", field: "name" },
+            { title: "Surname", field: "surname" },
+            { title: "Year", field: "birthYear", type: "numeric" },
+            {
+              title: "City",
+              field: "birthCity",
+              lookup: { 34: "İstanbul", 63: "Şanlıurfa" },
+            },
+          ]}
+          data={[
+            {
+              name: "Mehmet",
+              surname: "Baran",
+              birthYear: 1987,
+              birthCity: 63,
+            },
+            {
+              name: "Chen",
+              surname: "f",
+              birthYear: 1934,
+              birthCity: 12,
+            },
+            {
+              name: "Chen",
+              surname: "f",
+              birthYear: 1934,
+              birthCity: 12,
+            },
+            {
+              name: "Chen",
+              surname: "f",
+              birthYear: 1934,
+              birthCity: 12,
+            },
+            {
+              name: "Chen",
+              surname: "f",
+              birthYear: 1934,
+              birthCity: 12,
+            },
+            {
+              name: "Chen",
+              surname: "f",
+              birthYear: 1934,
+              birthCity: 12,
+            },
+            {
+              name: "Chen",
+              surname: "f",
+              birthYear: 1934,
+              birthCity: 12,
+            },
+          ]}
+          title="Demo Title"
+        />
+      </div>
     </div>
   );
 }
