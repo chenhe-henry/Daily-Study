@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Headroom from "react-headroom";
@@ -51,6 +51,31 @@ function App() {
       </header>
       <div style={{ maxWidth: "100%" }}>
         <MaterialTable
+          detailPanel={(rowData) => {
+            return (
+              <Fragment>
+                <div>
+                  <h1>This is the details</h1>
+                </div>
+                <iframe
+                  width="100%"
+                  height="315"
+                  src="https://www.youtube.com/embed/C0DPdy98e4c"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                />
+              </Fragment>
+            );
+          }}
+          options={{
+            sorting: true,
+            exportButton: true,
+            grouping: true, // ,fixedColumns: {
+            //   left: 2,
+            //   right: 0,
+            // },
+          }}
           columns={[
             { title: "Name", field: "name" },
             { title: "Surname", field: "surname" },
