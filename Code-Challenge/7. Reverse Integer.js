@@ -17,11 +17,19 @@
 // For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.
 
 var reverse = function (x) {
-  let arr = x.toString().split("");
-
-  return arr;
+  let arr;
+  if (x >= 0) {
+    arr = x.toString().split("").reverse().join("");
+    if (arr < Math.pow(2, 31) - 1) return arr;
+    return 0;
+  } else {
+    arr = (-x).toString().split("").reverse().join("");
+    if (-arr > Math.pow(-2, 31)) return -arr;
+    return 0;
+  }
 };
 
 console.log(reverse(123));
 console.log(reverse(-123));
 console.log(reverse(120));
+console.log(reverse(1534236469));
