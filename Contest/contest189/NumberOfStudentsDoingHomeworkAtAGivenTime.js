@@ -41,11 +41,7 @@ var busyStudent = function (startTime, endTime, queryTime) {
   let studentNum = 0;
 
   for (let i = 0; i < endTime.length; i++) {
-    if (endTime[i] === queryTime) {
-      studentNum++;
-    } else if (startTime[i] === queryTime) {
-      studentNum++;
-    } else if (endTime[i] > queryTime && startTime[i] < queryTime) {
+    if (endTime[i] >= queryTime && startTime[i] <= queryTime) {
       studentNum++;
     }
   }
