@@ -12,3 +12,4 @@ foo: { id: 1, height: '200px', width: '100px' },
 bar: { id: 2, height: '300px', width: '400px' }
 }
 */
+console.table({ foo, bar });
