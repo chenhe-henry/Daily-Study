@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+}
+h1 {
+  color: red;
+}
+.naviTwo {
+  opacity: 0;
+}
+.pics {
+  max-width: 100%;
+  height: auto;
+  margin: 0 20%;
+}
+.words {
+  font-size: 5vw;
+}
+.navi1 {
+  background-color: red;
+  padding: 20px;
+  width: 20%;
+  float: left;
+}
+.navi2 {
+  background-color: yellow;
+  padding: 20px;
+  width: 60%;
+  float: left;
+}
+.navi3 {
+  background-color: blue;
+  padding: 20px;
+  width: 20%;
+  float: left;
+}
+
+.left {
+  background-color: gray;
+  float: left;
+  padding: 20px;
+}
+.right {
+  background-color: green;
+  float: right;
+  padding: 20px;
+}
+@media screen and (max-width: 1800px) {
+  .navi1,
+  .navi2,
+  .navi3 {
+    width: 50%;
+  }
+  .right {
+    float: left;
+  }
+}
+@media screen and (max-width: 800px) {
+  .navi1,
+  .navi2,
+  .navi3 {
+    width: 100%;
+  }
+  .navi {
+    opacity: 0;
+  }
+  .naviTwo {
+    opacity: 1;
+  }
+}
