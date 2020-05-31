@@ -34,3 +34,12 @@ console.log(maxProduct([3, 4, 5, 2]));
 console.log(maxProduct([1, 5, 4, 5]));
 console.log(maxProduct([3, 7]));
 console.log(maxProduct([10, 2, 5, 2]));
+
+// soultion 2
+// nums
+//     .sort(function (a, b) {
+//         return a - b;
+//     })
+//     .reverse();
+// let result = (nums[0] - 1) * (nums[1] - 1);
+// return result;
