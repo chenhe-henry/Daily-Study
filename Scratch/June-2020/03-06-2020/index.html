@@ -12,37 +12,39 @@
     <h1 id="titleOne">Hello World</h1>
     <p id="titlePa" style="color: red;">This time is nice</p>
     <h2 id="titleHtwo">这是一个测试</h2>
+
+    <script>
+      var lanChangeZh = document.getElementById("changezh");
+      var lanChangeEn = document.getElementById("changeen");
+      var changeDarkMode = document.getElementById("darkmode");
+      lanChangeZh.addEventListener("click", function () {
+        document.getElementById("titleLan").lang = "zh";
+        document.getElementById("titleOne").innerHTML = "你好";
+        document.getElementById("titlePa").innerHTML = "这个时间很好";
+        document.getElementById("titlePa").style.color = "blue";
+        document.getElementById("titleHtwo").innerHTML = "这是一个测试";
+      });
+      lanChangeEn.addEventListener("click", function () {
+        document.getElementById("titleLan").lang = "en";
+        document.getElementById("titleOne").innerHTML = "Hello World";
+        document.getElementById("titlePa").innerHTML = "This time is nice";
+        document.getElementById("titlePa").style.color = "red";
+        document.getElementById("titleHtwo").innerHTML = "This is a test";
+      });
+      changeDarkMode.addEventListener("toggle", function () {
+        if (
+          document.getElementsByTagName("body")[0].style.backgroundColor ===
+          "white"
+        ) {
+          document.getElementsByTagName("body")[0].style.backgroundColor =
+            "aqua";
+          changeDarkMode.innerHTML = "Day Mode";
+        } else {
+          document.getElementsByTagName("body")[0].style.backgroundColor =
+            "white";
+          changeDarkMode.innerHTML = "Dark Mode";
+        }
+      });
+    </script>
   </body>
-  <script>
-    var lanChangeZh = document.getElementById("changezh");
-    var lanChangeEn = document.getElementById("changeen");
-    var changeDarkMode = document.getElementById("darkmode");
-    lanChangeZh.addEventListener("click", function () {
-      document.getElementById("titleLan").lang = "zh";
-      document.getElementById("titleOne").innerHTML = "你好";
-      document.getElementById("titlePa").innerHTML = "这个时间很好";
-      document.getElementById("titlePa").style.color = "blue";
-      document.getElementById("titleHtwo").innerHTML = "这是一个测试";
-    });
-    lanChangeEn.addEventListener("click", function () {
-      document.getElementById("titleLan").lang = "en";
-      document.getElementById("titleOne").innerHTML = "Hello World";
-      document.getElementById("titlePa").innerHTML = "This time is nice";
-      document.getElementById("titlePa").style.color = "red";
-      document.getElementById("titleHtwo").innerHTML = "This is a test";
-    });
-    changeDarkMode.addEventListener("toggle", function () {
-      if (
-        document.getElementsByTagName("body")[0].style.backgroundColor ===
-        "white"
-      ) {
-        document.getElementsByTagName("body")[0].style.backgroundColor = "aqua";
-        changeDarkMode.innerHTML = "Day Mode";
-      } else {
-        document.getElementsByTagName("body")[0].style.backgroundColor =
-          "white";
-        changeDarkMode.innerHTML = "Dark Mode";
-      }
-    });
-  </script>
 </html>
