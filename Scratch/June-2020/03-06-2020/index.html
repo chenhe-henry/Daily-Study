@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body>
+  <body id="body" style="background-color: white;">
     <button id="changezh">Chinese</button>
     <button id="changeen">English</button>
+    <details id="darkmode"> <button>Dark Mode</button></details>
     <h1 id="titleOne">Hello World</h1>
     <p id="titlePa" style="color: red;">This time is nice</p>
     <h2 id="titleHtwo">这是一个测试</h2>
@@ -15,6 +16,7 @@
   <script>
     var lanChangeZh = document.getElementById("changezh");
     var lanChangeEn = document.getElementById("changeen");
+    var changeDarkMode = document.getElementById("darkmode");
     lanChangeZh.addEventListener("click", function () {
       document.getElementById("titleLan").lang = "zh";
       document.getElementById("titleOne").innerHTML = "你好";
@@ -28,6 +30,15 @@
       document.getElementById("titlePa").innerHTML = "This time is nice";
       document.getElementById("titlePa").style.color = "red";
       document.getElementById("titleHtwo").innerHTML = "This is a test";
+    });
+    changeDarkMode.addEventListener("toggle", function () {
+      if (document.getElementById("body").style.backgroundColor === "white") {
+        document.getElementById("body").style.backgroundColor = "aqua";
+        changeDarkMode.innerHTML = "Day Mode";
+      } else {
+        document.getElementById("body").style.backgroundColor = "white";
+        changeDarkMode.innerHTML = "Dark Mode";
+      }
     });
   </script>
 </html>
