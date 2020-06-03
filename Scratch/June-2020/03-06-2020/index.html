@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html id="titleLan" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="changezh">Chinese</button>
+    <button id="changeen">English</button>
+    <h1 id="titleOne">Hello World</h1>
+    <p>This time is nice</p>
+    <h2 id="titleHtwo">这是一个测试</h2>
+  </body>
+  <script>
+    var lanChange = document.getElementById("changezh");
+    var lanChangeEn = document.getElementById("changeen");
+    lanChange.addEventListener("click", function () {
+      document.getElementById("titleLan").lang = "zh";
+      document.getElementById("titleOne").innerHTML = "你好";
+    });
+    lanChangeEn.addEventListener("click", function () {
+      document.getElementById("titleLan").lang = "en";
+      document.getElementById("titleHtwo").innerHTML = "This is a test";
+    });
+  </script>
+</html>
