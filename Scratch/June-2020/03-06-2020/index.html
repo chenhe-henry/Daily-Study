@@ -32,8 +32,11 @@
       document.getElementById("titleHtwo").innerHTML = "This is a test";
     });
     changeDarkMode.addEventListener("toggle", function () {
-      if (document.getElementById("body").style.backgroundColor === "white") {
-        document.getElementById("body").style.backgroundColor = "aqua";
+      if (
+        document.getElementsByTagName("body")[0].style.backgroundColor ===
+        "white"
+      ) {
+        document.getElementsByTagName("body")[0].style.backgroundColor = "aqua";
         changeDarkMode.innerHTML = "Day Mode";
       } else {
         document.getElementsByTagName("body")[0].style.backgroundColor =
