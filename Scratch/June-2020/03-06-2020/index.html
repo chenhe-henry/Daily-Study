@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body id="body" style="background-color: white;">
+  <body style="background-color: white;">
     <button id="changezh">Chinese</button>
     <button id="changeen">English</button>
     <details id="darkmode"> <button>Dark Mode</button></details>
@@ -36,7 +36,8 @@
         document.getElementById("body").style.backgroundColor = "aqua";
         changeDarkMode.innerHTML = "Day Mode";
       } else {
-        document.getElementById("body").style.backgroundColor = "white";
+        document.getElementsByTagName("body")[0].style.backgroundColor =
+          "white";
         changeDarkMode.innerHTML = "Dark Mode";
       }
     });
