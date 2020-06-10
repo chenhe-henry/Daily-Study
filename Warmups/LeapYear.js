@@ -18,3 +18,17 @@
 
 // Ask the user what number they want to test
 // Watch a whole heap of information about leap years...http://www.youtube.com/watch?v=xX96xng7sAE
+
+const isLeapYear = (year) => {
+  if (year % 4 === 0 && year % 100 !== 0) {
+    return true;
+  } else if (year % 400 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+};
+console.log(isLeapYear(1997));
+console.log(isLeapYear(1996));
+console.log(isLeapYear(1990));
+console.log(isLeapYear(2000));
