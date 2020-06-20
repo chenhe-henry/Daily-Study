@@ -1,0 +1,9 @@
+.p1::first-letter {
+  color: #ff3366;
+  font-size: 4em;
+}
+
+/* note:
+  use ::first-letter to apply style on the specific letter
+
+*/
