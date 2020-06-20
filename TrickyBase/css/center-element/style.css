@@ -1,0 +1,31 @@
+.p1 {
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: justify;
+}
+
+/* note: 
+
+To center an element in the screen, for instance, a modal, or a login form at landing page,
+we usually use 
+
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+; */
+
+/* note: 
+
+And we can use 
+
+  text-align: justify;
+
+to make the whole paragraph more beautiful
+
+*/

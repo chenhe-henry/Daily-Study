@@ -1,0 +1,45 @@
+.p1 {
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: justify;
+}
+
+.p1:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  animation: ellipsis 2s infinite;
+  content: "...";
+}
+@keyframes ellipsis {
+  from {
+    width: 2px;
+  }
+  to {
+    width: 30px;
+  }
+}
+
+/* note:
+  we can use a :after with content to animate whatever we want after the content 
+
+  .p1:after {
+  overflow: hidden; note: if don't mention overflow, it will be fixed and always there, so remember to hidden overflow
+  display: inline-block;
+  vertical-align: bottom; note: choose the position such as baseline, top, bottom
+  animation: ellipsis 2s infinite;
+  content: "...";  note: add any content as you like
+}
+@keyframes ellipsis {
+  from {
+    width: 2px;
+  }
+  to {
+    width: 30px;   note: adjust the width to make all the three dots show on the screen
+  }
+}
+
+*/

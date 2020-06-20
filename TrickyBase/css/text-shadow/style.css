@@ -1,0 +1,20 @@
+.p1 {
+  font-size: 2rem;
+  color: transparent;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.p1:hover {
+  color: black;
+  text-shadow: unset;
+}
+
+/* note:
+
+we can use 
+
+
+  color: transparent;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+to generate a shadow over the text, and unset the text-shadow with hover or active or focus
+*/
