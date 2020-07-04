@@ -1,0 +1,61 @@
+.avatar {
+  height: 200px;
+  clip-path: circle();
+}
+.sessions {
+  display: flex;
+}
+.session {
+  flex-grow: 1;
+  text-align: center;
+  width: 33vw;
+  margin: 50px;
+}
+.session-content {
+  font-size: 1.2rem;
+  width: 50%;
+  text-align: justify;
+  margin: 0 auto;
+}
+.banner {
+  height: 10vh;
+  color: white;
+  padding-top: 5vh;
+  text-align: center;
+  margin: auto;
+  background-color: rgb(65, 65, 205);
+}
+.members {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 20px;
+}
+.member {
+  margin: 20px;
+}
+.navbar {
+  display: flex;
+  width: 60vw;
+  margin: 20px auto;
+  text-align: center;
+  align-items: center;
+}
+.navbrand {
+  font-size: 2.2rem;
+  cursor: pointer;
+  font-weight: 500;
+  flex-grow: 1;
+}
+
+.navitem {
+  flex-grow: 1;
+  margin: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.navitem:hover {
+  color: grey;
+}
+.logo {
+  height: 50px;
+}

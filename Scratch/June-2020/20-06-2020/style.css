@@ -1,0 +1,33 @@
+.p1 {
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: justify;
+  color: transparent;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.p1:hover {
+  color: black;
+  text-shadow: unset;
+}
+.p1::first-letter {
+  color: #ff3366;
+  font-size: 4em;
+}
+.p1:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  animation: ellipsis 3s infinite;
+  content: "..."; /* ascii code for the ellipsis character */
+}
+@keyframes ellipsis {
+  from {
+    width: 2px;
+  }
+  to {
+    width: 50px;
+  }
+}

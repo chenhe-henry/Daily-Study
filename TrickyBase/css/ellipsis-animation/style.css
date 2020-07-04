@@ -22,9 +22,12 @@
     width: 30px;
   }
 }
-
+.dui {
+  background-image: url("https://theviberide.com/wp-content/uploads/2017/04/easting-forbody1.jpg");
+}
 /* note:
-  we can use a :after with content to animate whatever we want after the content 
+  we can use a :after with content to animate whatever we want after the content, NOte:it would be better to add position: absolute to :after,
+  or the whole paragraph will move...
 
   .p1:after {
   overflow: hidden; note: if don't mention overflow, it will be fixed and always there, so remember to hidden overflow
