@@ -15,11 +15,11 @@ function changeColor() {
   num4.innerHTML = randomOpacity;
 }
 
-const changeStart = setInterval(changeColor, 1000);
+const changeStart = setInterval(changeColor, 5000);
 
 document.getElementById("stop").addEventListener("click", () => {
   clearInterval(changeStart);
 });
 document.getElementById("go").addEventListener("click", () => {
-  setInterval(changeColor, 1000);
+  setInterval(changeColor, 5000);
 });
