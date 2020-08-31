@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block{
+            display: grid;
+        grid-template-rows: repeat(4,1fr);
+            border: 1px solid black;
+          
+            text-align: center;
+        }
+        .header{
+            position: relative;
+            
+        }
+        .header-img{
+            position: absolute;
+            right: -2vw;
+            top: -2vh;
+        }
+        .header-selected{
+            text-align: center;
+            background-color: aqua;
+            width: 50%;
+            height: 10vh;
+            position: absolute;
+            right: -15vw;
+            top: 0vh;
+            overflow:visible;
+            transform: rotate(45deg);
+            clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 0 99%, 0% 50%, 0 0);
+        }
+        .header-selected-text{
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+    <div class="block">
+        <div class="header">
+            <h1 class="header-title">Package</h1>
+            <img src="./Group 66.png" alt="ha" class="header-img">
+            <div class="header-selected"><p class="header-selected-text">Selected</p></div>
+        </div>
+        <div>
+            <h3>Free trial with every package</h3>
+        </div>
+        <div>Price</div>
+        <div><button>Click</button></div>
+    </div>
+   
+</body>
+</html>

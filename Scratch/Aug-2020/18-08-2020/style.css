@@ -1,0 +1,39 @@
+html {
+  scroll-snap-type: mandatory;
+
+  scroll-snap-type: y mandatory;
+  overflow: scroll;
+  margin: 0;
+}
+
+section {
+  padding: 7em;
+  height: calc(100vh - 14em);
+  color: white;
+  scroll-snap-align: start;
+  white-space: nowrap;
+  transition: all 2s;
+}
+h1:hover {
+  animation: move 5.5s infinite alternate linear;
+}
+section:nth-of-type(1) {
+  background-color: rgb(64, 255, 0);
+}
+section:nth-of-type(2) {
+  background-color: blue;
+}
+section:nth-of-type(3) {
+  background-color: green;
+}
+
+@keyframes move {
+  0% {
+    left: 0;
+    transform: translate(0, 0);
+  }
+  100% {
+    left: 100%;
+    transform: translate(-100%, 0);
+  }
+}

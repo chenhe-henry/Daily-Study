@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="imgBx">
+          <img src="messi.jpg" alt="cluo" />
+        </div>
+        <div class="contentBx">
+          <h2>Messi</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit a
+            quod ipsam repudiandae quasi facere id explicabo quaerat
+            reprehenderit aliquid nemo quae quas ratione quos et ipsa ex,
+            voluptatem dicta?
+          </p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="imgBx">
+          <img src="ronaldo.jpg" alt="cluo" />
+        </div>
+        <div class="contentBx">
+          <h2>Ronaldo</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit a
+            quod ipsam repudiandae quasi facere id explicabo quaerat
+            reprehenderit aliquid nemo quae quas ratione quos et ipsa ex,
+            voluptatem dicta?
+          </p>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll(".box"), {
+        max: 25,
+        speed: 400,
+      });
+    </script>
+  </body>
+</html>
