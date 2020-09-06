@@ -1,0 +1,1 @@
+convert -resize 33% /Users/chenhe/Documents/Daily-Study/TrickyBase/javascript/convert-image-size/images/findhome.jpg ./images/findhome-large.jpg

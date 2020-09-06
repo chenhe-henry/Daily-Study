@@ -1,0 +1,30 @@
+.counter__block {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-items: center;
+  animation: fadein 2s ease-in;
+  transition: all 0.4s;
+}
+.counter__block-block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-size: 3rem;
+}
+.counter__block-block-title {
+  margin-left: 20px;
+}
+.title {
+  text-align: center;
+}
+
+@keyframes fadein {
+  0% {
+    transform: translateY(20vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
