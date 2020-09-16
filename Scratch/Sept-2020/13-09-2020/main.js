@@ -1,23 +1,30 @@
-const readline = require("readline");
-const readlineInterface = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
+let res = 9;
 
-async function main() {
-  const name = await askQuestion(readlineInterface, "What is your name?");
-  const job = await askQuestion(readlineInterface, "What is your job?");
-  const age = await askQuestion(readlineInterface, "What is your age?");
-  console.log(`Hello ${name}. You are a ${age} year old ${job}.`);
-  readlineInterface.close();
-}
-
-main();
-
-function askQuestion(readlineInterface, question) {
-  return new Promise((resolve) => {
-    readlineInterface.question(question, (answer) => {
-      resolve(answer);
-    });
+let newFunction = (num) => {
+  return new Promise((resolve, reject) => {
+    console.log(`Promise starting`);
+    if (num > 5) {
+      resolve(`Nice, the num is larger than 5 ${res} = ${num}`);
+    } else {
+      reject(`Sorry, the num is too small`);
+    }
   });
-}
+};
+
+let newResponse = (response) => {
+  return new Promise((resolve) => {
+    console.log(`newResponse is coming`);
+    resolve(`Now you can see the response is ${response}`);
+  });
+};
+
+(coming = async () => {
+  try {
+    const response = await newFunction(6);
+    console.log(`Response received`);
+    const precessResponse = await newResponse(response);
+    console.log(precessResponse);
+  } catch (err) {
+    console.log(err);
+  }
+})();
